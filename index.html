@@ -1,0 +1,18 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<div id="message"></div>
+<script>
+    $.ajax({
+        url:"index.php",
+        method:"POST",
+        success: function(response){
+            if (response == 1){
+                $("#message").html("Success").css("color", "green");
+            }else {
+                $("#message").html("Error").css("color", "red");
+            }
+
+            
+        }
+
+    })
+</script>
